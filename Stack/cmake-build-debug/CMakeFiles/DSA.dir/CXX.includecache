@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/rootuser/Desktop/DSA/Stack.h
+list
+-
+
+/Users/rootuser/Desktop/DSA/StackArray.cpp
+StackArray.h
+/Users/rootuser/Desktop/DSA/StackArray.h
+
+/Users/rootuser/Desktop/DSA/StackArray.h
+
+/Users/rootuser/Desktop/DSA/main.cpp
+iostream
+-
+Stack.h
+/Users/rootuser/Desktop/DSA/Stack.h
+StackArray.h
+/Users/rootuser/Desktop/DSA/StackArray.h
+
