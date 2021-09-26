@@ -3,30 +3,30 @@
 
 template<class Type>
 class Node {
-    Type *_previousNode;
-    Type *_nextNode;
+    Node<Type> *_previousNode;
+    Node<Type> *_nextNode;
     Type *_node;
 
 public:
-    Node(Type *value) {
-        _node = value;
+    Node(Type *node) {
+        _node = node;
         _previousNode = nullptr;
         _nextNode = nullptr;
     }
 
-    Type *getPreviousNode() const {
+    Node<Type> *getPreviousNode() const {
         return _previousNode;
     }
 
-    void setPreviousNode(Type *previousNode) {
+    void setPreviousNode(Node<Type> *previousNode) {
         _previousNode = previousNode;
     }
 
-    Type *getNextNode() const {
+    Node<Type> *getNextNode() const {
         return _nextNode;
     }
 
-    void setNextNode(Type *nextNode) {
+    void setNextNode(Node<Type> *nextNode) {
         _nextNode = nextNode;
     }
 
@@ -36,6 +36,11 @@ public:
 
     void setNode(Type *node) {
         _node = node;
+    }
+
+    ~Node() {
+        delete _node;
+        _node = nullptr;
     }
 };
 

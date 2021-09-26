@@ -11,33 +11,55 @@ class LinkedList {
 public:
     LinkedList() {
         _firstNode = nullptr;
-        _lastNode = _firstNode;
+        _lastNode = nullptr;
     }
 
     void addFirst(Node<Type> *element) {
         if (element != nullptr) {
             if (_firstNode == nullptr) {
                 _firstNode = element;
+                _lastNode = _firstNode;
             } else {
                 element->setNextNode(_firstNode);
+                _firstNode->setPreviousNode(element);
                 _firstNode = element;
             }
         }
     }
 
     Node<Type> *removeFirst() {
-
+        if (!empty()) {
+            if (_firstNode->getNextNode() == nullptr) {
+                _firstNode = nullptr;
+                _lastNode = nullptr;
+            } else {
+                _firstNode->getNextNode()->setPreviousNode(nullptr);
+                _firstNode = _firstNode->getNextNode();
+            }
+        }
     }
 
     void addLast(Node<Type> *element) {
         if (_lastNode == nullptr) {
             _lastNode = element;
-            
+            _firstNode = _lastNode;
+        } else {
+            _lastNode->setNextNode(element);
+            element->setPreviousNode(_lastNode);
+            _lastNode = element;
         }
     }
 
     Node<Type> *removeLast() {
-
+        if (!empty()) {
+            if (_lastNode->getPreviousNode() == nullptr) {
+                _firstNode = nullptr;
+                _lastNode = nullptr;
+            } else {
+                _lastNode->getPreviousNode()->setNextNode(nullptr);
+                _lastNode = _lastNode->getPreviousNode();
+            }
+        }
     }
 
     Node<Type> *getFirstNode() const {
@@ -55,6 +77,12 @@ public:
     void setLastNode(Node<Type> *lastNode) {
         _lastNode = lastNode;
     }
+
+    bool empty() {
+        return _firstNode == nullptr;
+    }
+
+    ~LinkedList() {}
 };
 
 

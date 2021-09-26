@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/rootuser/Desktop/data-structures-and-algorithms/LinkedList/LinkedList.h
+Node.h
+/Users/rootuser/Desktop/data-structures-and-algorithms/LinkedList/Node.h
+
+/Users/rootuser/Desktop/data-structures-and-algorithms/LinkedList/Node.h
+
+/Users/rootuser/Desktop/data-structures-and-algorithms/LinkedList/main.cpp
+iostream
+-
+LinkedList.h
+/Users/rootuser/Desktop/data-structures-and-algorithms/LinkedList/LinkedList.h
+
