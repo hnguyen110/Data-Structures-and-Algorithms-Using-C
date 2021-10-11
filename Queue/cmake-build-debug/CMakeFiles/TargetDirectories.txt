@@ -1,0 +1,3 @@
+/Users/rootuser/Desktop/data-structures-and-algorithms/Queue/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/rootuser/Desktop/data-structures-and-algorithms/Queue/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/rootuser/Desktop/data-structures-and-algorithms/Queue/cmake-build-debug/CMakeFiles/Queue.dir

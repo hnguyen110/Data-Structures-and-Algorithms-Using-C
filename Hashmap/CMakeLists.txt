@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.17)
+project(Hashmap)
+set(CMAKE_CXX_STANDARD 17)
+add_executable(Hashmap pair.h hashmap.h leak_check.cpp)
+
+#cmake_minimum_required(VERSION 3.17)
+#project(Hashmap)
+#add_subdirectory(unit-test)
+#include_directories(unit-test/googletest/include/gtest)
+#set(CMAKE_CXX_STANDARD 17)
+#add_executable(Hashmap pair.h hashmap.h main.cpp)
+#target_link_libraries(Hashmap gtest gtest_main)
